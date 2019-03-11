@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <meta charset="utf-8">
+    <!-- 引入 bootstrap 及相关文件 -->
+    <link rel="stylesheet" type="text/css" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+    <script src="/node_modules/jquery/dist/jquery.min.js" type="text/javascript"></script>
+    <script src="/public/js/script.js"></script>
+</head>
+
+<body>
+    <div id="container" class="container">
+        <!-- 添加信息提示 -->
+        <!-- <% if (locals.success) { %>
+            <div id="alt_sucess" class="alert alert-success">
+                <%- success %>
+            </div>
+            <% } %>
+
+                <% if (locals.error) { %>
+                    <div id="alt_warning" class="alert alert-warning">
+                        <%= error %>
+                    </div>
+                    <% } %> -->
+
+        <!-- 表单 -->
+        <form class="form-signin" role="form" method="post" enctype='multipart/form-data' id="login_form">
+            <div class="form-group">
+                <lebal for="fulAvatar">上传文件</lebal>
+                <input type="file" id="fulAvatar" name="fulAvatar" accept="image/*" />
+            </div>
+            <button id="btnSub" class="btn btn-lg btn-primary" type="submit">上 传</button>
+        </form>
+    </div>
+    <script>
+        // $('#login_form').on('submit', function(e) {
+        //     e.preventDefault()
+        //     var formData = $(this).serialize()
+        //     console.log(formData)
+        //     $.ajax({
+        //         url: '/index',
+        //         type: 'post',
+        //         data: formData,
+        //         dataType: 'json',
+        //         success: function(data) {
+        //             var err_code = data.err_code
+        //             if (err_code === 0) {
+        //                 // window.alert('注册成功！')
+        //                 // 服务端重定向针对异步请求无效
+        //                 window.location.href = '/'
+        //             } else if (err_code === 1) {
+        //                 window.alert('邮箱或者密码错误')
+        //             } else if (err_code === 500) {
+        //                 window.alert('服务器忙，请稍后重试！')
+        //             }
+        //         }
+        //     })
+        // })
+    </script>
+</body>
+
+</html>

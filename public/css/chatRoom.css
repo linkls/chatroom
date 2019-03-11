@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #DDDDDD;
+}
+
+.chatroom {
+    width: 1000px;
+    height: 600px;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    opacity: 0.7;
+    box-shadow: 0 0 3px 3px #BBBBBB;
+}
+
+.left {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-color: #F0F0F0;
+}
+
+.icon-container {
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-container img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.self-container {
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 60px;
+}
+
+.self-container .id {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.self-container .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 22px;
+}
+
+.note-container {
+    /*margin: 10px;*/
+    padding: 5px;
+    height: 30%;
+    /*border-radius: 10px;*/
+    /*background-color: white;*/
+}
+
+.right {
+    /*border-left: 1px solid #888888;*/
+    width: 70%;
+    height: 100%;
+    /*background-image: url(http://p4.so.qhmsg.com/bdr/_240_/t010d7efb6430fb56d9.jpg);*/
+    background-color: #EEEEEE;
+}
+
+.right .head {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.right .chat-container {
+    padding: 10px;
+    height: 80%;
+    overflow-y: scroll;
+    background-color: #F5F5F5;
+    background-image: url(http://tool.uixsj.cn/qchan/uploads/2018/08/traffic_a_lot_of_cars_driving_across_the_golden_gate_bridge_free_stock_photos_picjumbo_HNCK2899_2210x1474.jpg);
+    box-sizing: border-box;
+}
+
+
+/*滚动条样式*/
+
+.right .chat-container::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 8px;
+    /*高宽分别对应横竖滚动条的尺寸*/
+    height: 8px;
+}
+
+.right .chat-container::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 2rem;
+    /*-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);*/
+    background-color: #AAAAAA;
+}
+
+.right .chat-container::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    /*-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);*/
+    border-radius: 2rem;
+    background-color: transparent;
+}
+
+.right .chat-container .message-self,
+.right .chat-container .message-other {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.right .chat-container .message-self {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+
+.right .chat-container .message-other {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /*justify-content: flex-start;*/
+}
+
+.right .chat-container .message-container {
+    max-width: 80%;
+    /*height: auto;*/
+    display: flex;
+    flex-direction: row;
+    /*box-sizing: border-box;*/
+}
+
+.right .chat-container .message-self .message-container .message-content {
+    padding-right: 10px;
+}
+
+.right .chat-container .message-other .message-container .message-content {
+    padding-left: 10px;
+}
+
+.right .chat-container .message-self .message-container .message-content .message {
+    background-color: blue;
+    color: white;
+}
+
+.right .chat-container .message-other .message-container .message-content .message {
+    background-color: white;
+    color: black;
+}
+
+.right .chat-container .message-container .message-content .name {
+    font-size: 12px;
+    padding: 5px 0;
+    color: #888888;
+}
+
+.right .chat-container .message-self .message-container .message-content .name {
+    text-align: right;
+}
+
+.right .chat-container .message-other .message-container .message-content .name {
+    text-align: left;
+}
+
+.right .chat-container .message-container .message-content .message {
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.right .chat-container .message-container .icon img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.right .chat-container .notify-container {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right .chat-container .notify-container .notify {
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color: #999999;
+    opacity: 0.9;
+    font-size: 12px;
+    color: white;
+}
+
+.right .input-container {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: blue;
+    font-size: 18px;
+}
+
+.right .input-container .input-content {
+    position: relative;
+    width: 85%;
+    background-color: white;
+}
+
+.right .input-container .input-content input {
+    border: 0;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    /* 去除input框外边框  */
+    outline: none;
+    font-size: 18px;
+}
+
+.right .input-container .input-content .num {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 70px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 1));
+    font-weight: bold;
+    color: #333333;
+}
+
+.right .input-container .input-content input::-webkit-input-placeholder {
+    font-size: 18px;
+}
+
+.right .input-container .send {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    font-weight: bold;
+}
