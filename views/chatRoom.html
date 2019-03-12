@@ -103,7 +103,7 @@
             if (name == message.name) {
                 html = '<div class="message-self"><div class="message-container"><div class="message-content"><div class="name">' + message.name + '</div><div class="message">' + message.msg + '</div></div><div class="icon"><img src="' + icon + '" /></div></div></div>';
             } else {
-                html = '<div class="message-other"><div class="message-container"><div class="icon"><img src="' + icon + '" /></div><div class="message-content"><div class="name">' + message.name + '</div><div class="message">' + message.msg + '</div></div></div></div>';
+                html = '<div class="message-other"><div class="message-container"><div class="icon"><img src="' + message.icon + '" /></div><div class="message-content"><div class="name">' + message.name + '</div><div class="message">' + message.msg + '</div></div></div></div>';
             }
             $(".chat-container").append(html);
             scrollToBottom();
@@ -203,7 +203,7 @@
          */
         function send() {
             var msg = $("#msg").val();
-
+            var icon = $('#img').data('name');
             if ("" == name) {
                 getName();
             } else {
@@ -213,7 +213,8 @@
                     const message = {
                         id: id,
                         name: name,
-                        msg: msg
+                        msg: msg,
+                        icon : icon
                     };
                     // 通过socket发送消息
                     socket.send(message);
